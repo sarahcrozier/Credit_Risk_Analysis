@@ -2,12 +2,11 @@
 
 ## Project Overview
 
-Credit risk is an inherently unbalanced classification problem, as good loans easily outnumber risky loans. Therefore, you’ll need to employ different techniques to train and evaluate models with unbalanced classes. In this project I used imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling.
+Credit risk is an inherently unbalanced classification problem, as good loans easily outnumber risky loans.  In this project I used imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling.
 
-Using the credit card credit dataset from LendingClub, a peer-to-peer lending services company, I oversampled the data using the RandomOverSampler and SMOTE algorithms, and undersample the data using the ClusterCentroids algorithm. Then, I used a combinatorial approach of over- and undersampling using the SMOTEENN algorithm. Next, I compared two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk. Lastly, I evaluated the performance of these models.
+Using the credit card credit dataset from LendingClub, a peer-to-peer lending services company, I oversampled the data using the RandomOverSampler and SMOTE algorithms, and undersample the data using the ClusterCentroids algorithm. Then I used a combinatorial approach of over- and undersampling using the SMOTEENN algorithm. Next, I compared two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk.
 
 # Results
-
 
 ## Random Over Sampler
 * High Risk: Precision = 0.01 Recall = 0.69
@@ -52,4 +51,6 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 ![RandomOverSampler Results](Images/EasyEnsamble.png)
 
 # Summary
-* None of the modeles are perfect. They are correctly precision  
+* None of the modeles work perfectly to predict who would be a high-risk client. The RandomForestClassifier and the EasyEnsambleClassifer have excellent precision and recall to predict low-risk clients, but not high-risk clients.
+
+* To further understand and find a model that would work, we would need to further analysis the data to see how many high-risk samples are in our data set and if it is the reason for the low precision scores. 
